@@ -216,7 +216,7 @@ class Data
 
         $productLinkedFiled = $this->getMetadataPool()
             ->getMetadata(\Magento\Catalog\Api\Data\ProductInterface::class)
-            ->getLinkField();
+            ->getIdentifierField();
         $parentId = $parentProduct->getData($productLinkedFiled);
 
         $this->addFilterByParent($productCollection, $parentId);
